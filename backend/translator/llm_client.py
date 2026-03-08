@@ -109,21 +109,44 @@ class LLMClient:
         self.provider_used = "groq"
 
     async def complete(self, prompt: str, temperature: float = 0.1) -> str:
-        """Try primary provider, fallback to secondary on rate limit."""
+        """Try providers in order, backing off when rate‑limited.
+
+        The method will attempt each configured provider. If a provider
+        returns a RateLimitError we retry it a few times with exponential
+        backoff before moving on to the next provider.  This lets a single
+        (slow) provider recover rather than immediately failing the whole
+        job.  When all providers have been tried and none succeeded we raise
+        AllProvidersExhausted.
+        """
         errors = []
+        # maximum number of retries per provider before giving up
+        max_retries = 3
         for i in range(len(self.providers)):
             idx = (self.current_provider_idx + i) % len(self.providers)
             provider = self.providers[idx]
-            try:
-                result = await provider.complete(prompt, temperature)
-                self.provider_used = provider.name
-                return result
-            except RateLimitError as e:
-                logger.warning(f"Rate limited on {provider.name}: {e}")
-                errors.append(str(e))
-                # Small delay before trying next
-                await asyncio.sleep(1)
-                continue
+            retry_delay = 1.0
+            for attempt in range(1, max_retries + 1):
+                try:
+                    result = await provider.complete(prompt, temperature)
+                    self.provider_used = provider.name
+                    # move pointer so next call starts with same provider
+                    self.current_provider_idx = idx
+                    return result
+                except RateLimitError as e:
+                    logger.warning(
+                        f"{provider.name} rate limited (attempt {attempt}/{max_retries}): {e}"
+                    )
+                    errors.append(f"{provider.name}:{e}")
+                    if attempt < max_retries:
+                        # exponential backoff before retrying same provider
+                        await asyncio.sleep(retry_delay)
+                        retry_delay *= 2
+                        continue
+                    else:
+                        # give up on this provider, try next one
+                        break
+            # small pause before switching to next provider to avoid thundering herd
+            await asyncio.sleep(0.5)
 
         raise AllProvidersExhausted(
             f"All LLM providers exhausted. Errors: {'; '.join(errors)}"
