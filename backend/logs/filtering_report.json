@@ -1,0 +1,954 @@
+[
+  {
+    "timestamp": "2026-03-07T09:15:23.616616",
+    "function_id": "PayrollSystem.java::PayrollSystem.getTaxRate",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Because the Indian tax system uses progressive brackets"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:24.909110",
+    "function_id": "PayrollSystem.java::PayrollSystem.getIncome",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Workaround: hardcoded values since DB connection is not available"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:26.065759",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateDeductions",
+    "comments_kept": 1,
+    "comments_stripped": 1,
+    "kept_samples": [
+      "Standard deduction per Section 16 - intentional fixed amount"
+    ],
+    "stripped_samples": [
+      "PF contribution (12% of basic, assuming basic = 60% of income)"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:15:27.131804",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateTax",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Ensure taxable income is not negative"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:28.270019",
+    "function_id": "PayrollSystem.java::PayrollSystem.formatOutput",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:29.283641",
+    "function_id": "PayrollSystem.java::PayrollSystem.getEmployee",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "TODO: Replace with actual DB lookup"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:15:30.410490",
+    "function_id": "PayrollSystem.java::PayrollSystem.processPayroll",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:31.744902",
+    "function_id": "PayrollSystem.java::PayrollSystem.validateInput",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Avoid null pointer exceptions by checking early"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:33.030980",
+    "function_id": "PayrollSystem.java::PayrollSystem.generateReport",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:15:34.196643",
+    "function_id": "PayrollSystem.java::PayrollSystem.main",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Validate all inputs first"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:13.573485",
+    "function_id": "PayrollSystem.java::PayrollSystem.getTaxRate",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Because the Indian tax system uses progressive brackets"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:14.792459",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateDeductions",
+    "comments_kept": 1,
+    "comments_stripped": 1,
+    "kept_samples": [
+      "Standard deduction per Section 16 - intentional fixed amount"
+    ],
+    "stripped_samples": [
+      "PF contribution (12% of basic, assuming basic = 60% of income)"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:32:15.874318",
+    "function_id": "PayrollSystem.java::PayrollSystem.getIncome",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Workaround: hardcoded values since DB connection is not available"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:17.002853",
+    "function_id": "PayrollSystem.java::PayrollSystem.formatOutput",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:18.026217",
+    "function_id": "PayrollSystem.java::PayrollSystem.getEmployee",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "TODO: Replace with actual DB lookup"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:32:19.027081",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateTax",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Ensure taxable income is not negative"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:20.058055",
+    "function_id": "PayrollSystem.java::PayrollSystem.processPayroll",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:21.129878",
+    "function_id": "PayrollSystem.java::PayrollSystem.generateReport",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:22.219063",
+    "function_id": "PayrollSystem.java::PayrollSystem.validateInput",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Avoid null pointer exceptions by checking early"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:32:23.198882",
+    "function_id": "PayrollSystem.java::PayrollSystem.main",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Validate all inputs first"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:19.968813",
+    "function_id": "PayrollSystem.java::PayrollSystem.getTaxRate",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Because the Indian tax system uses progressive brackets"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:21.454527",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateDeductions",
+    "comments_kept": 1,
+    "comments_stripped": 1,
+    "kept_samples": [
+      "Standard deduction per Section 16 - intentional fixed amount"
+    ],
+    "stripped_samples": [
+      "PF contribution (12% of basic, assuming basic = 60% of income)"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:43:22.528517",
+    "function_id": "PayrollSystem.java::PayrollSystem.getIncome",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Workaround: hardcoded values since DB connection is not available"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:23.619471",
+    "function_id": "PayrollSystem.java::PayrollSystem.formatOutput",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:24.522874",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateTax",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Ensure taxable income is not negative"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:25.556762",
+    "function_id": "PayrollSystem.java::PayrollSystem.getEmployee",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "TODO: Replace with actual DB lookup"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:43:26.523604",
+    "function_id": "PayrollSystem.java::PayrollSystem.processPayroll",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:27.579969",
+    "function_id": "PayrollSystem.java::PayrollSystem.validateInput",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Avoid null pointer exceptions by checking early"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:28.571758",
+    "function_id": "PayrollSystem.java::PayrollSystem.generateReport",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:43:29.814342",
+    "function_id": "PayrollSystem.java::PayrollSystem.main",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Validate all inputs first"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:35.550702",
+    "function_id": "PayrollSystem.java::PayrollSystem.getTaxRate",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Because the Indian tax system uses progressive brackets"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:36.670933",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateDeductions",
+    "comments_kept": 1,
+    "comments_stripped": 1,
+    "kept_samples": [
+      "Standard deduction per Section 16 - intentional fixed amount"
+    ],
+    "stripped_samples": [
+      "PF contribution (12% of basic, assuming basic = 60% of income)"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:52:37.687145",
+    "function_id": "PayrollSystem.java::PayrollSystem.getIncome",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Workaround: hardcoded values since DB connection is not available"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:38.698139",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateTax",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Ensure taxable income is not negative"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:39.832288",
+    "function_id": "PayrollSystem.java::PayrollSystem.getEmployee",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "TODO: Replace with actual DB lookup"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:52:40.765585",
+    "function_id": "PayrollSystem.java::PayrollSystem.formatOutput",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:41.649915",
+    "function_id": "PayrollSystem.java::PayrollSystem.processPayroll",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:42.798456",
+    "function_id": "PayrollSystem.java::PayrollSystem.validateInput",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Avoid null pointer exceptions by checking early"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:43.801740",
+    "function_id": "PayrollSystem.java::PayrollSystem.generateReport",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:52:44.818135",
+    "function_id": "PayrollSystem.java::PayrollSystem.main",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Validate all inputs first"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:24.732410",
+    "function_id": "PayrollSystem.java::PayrollSystem.getTaxRate",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Because the Indian tax system uses progressive brackets"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:25.742897",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateDeductions",
+    "comments_kept": 1,
+    "comments_stripped": 1,
+    "kept_samples": [
+      "Standard deduction per Section 16 - intentional fixed amount"
+    ],
+    "stripped_samples": [
+      "PF contribution (12% of basic, assuming basic = 60% of income)"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:58:26.606311",
+    "function_id": "PayrollSystem.java::PayrollSystem.getIncome",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Workaround: hardcoded values since DB connection is not available"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:27.654849",
+    "function_id": "PayrollSystem.java::PayrollSystem.formatOutput",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:28.481286",
+    "function_id": "PayrollSystem.java::PayrollSystem.calculateTax",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Ensure taxable income is not negative"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:29.393368",
+    "function_id": "PayrollSystem.java::PayrollSystem.getEmployee",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "TODO: Replace with actual DB lookup"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T09:58:30.429289",
+    "function_id": "PayrollSystem.java::PayrollSystem.processPayroll",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:31.460808",
+    "function_id": "PayrollSystem.java::PayrollSystem.generateReport",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:32.577766",
+    "function_id": "PayrollSystem.java::PayrollSystem.validateInput",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Avoid null pointer exceptions by checking early"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T09:58:33.485008",
+    "function_id": "PayrollSystem.java::PayrollSystem.main",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Validate all inputs first"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:39.478915",
+    "function_id": "BSTVisualization.java::BSTVisualization.postorder",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:40.426402",
+    "function_id": "BSTVisualization.java::BSTVisualization.preorder",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:41.313359",
+    "function_id": "BSTVisualization.java::BSTVisualization.inorder",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:42.202567",
+    "function_id": "BSTVisualization.java::BSTVisualization.calculateHeight",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:43.299844",
+    "function_id": "BSTVisualization.java::BSTVisualization.setInfo",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:44.372822",
+    "function_id": "BSTVisualization.java::BSTVisualization.getWidth",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:45.405570",
+    "function_id": "BSTVisualization.java::BSTVisualization.add",
+    "comments_kept": 1,
+    "comments_stripped": 3,
+    "kept_samples": [
+      "Set all traversal and height of BST"
+    ],
+    "stripped_samples": [
+      "x1=x;y1=y+20;x2=x-X+20;y2=y+Y+20;",
+      "x1=x+40;y1=y+20;x2=x+X+20;y2=y+Y+20;",
+      "paint(treePanel.getGraphics());"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T10:34:47.542558",
+    "function_id": "BSTVisualization.java::BSTVisualization.reArrangeNode",
+    "comments_kept": 0,
+    "comments_stripped": 1,
+    "kept_samples": [],
+    "stripped_samples": [
+      "node.p = new Points(x + 40, y + 20, x + X + 20, y + Y + 20);"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T10:34:48.972210",
+    "function_id": "BSTVisualization.java::BSTVisualization.initialize",
+    "comments_kept": 13,
+    "comments_stripped": 3,
+    "kept_samples": [
+      "frame size",
+      "Height of BST label",
+      "Height of BST answer",
+      "For geting data.",
+      "Add Button"
+    ],
+    "stripped_samples": [
+      "setLayout(null); // layout",
+      "btnAdd.setBounds(size.width - 130, 20, 100, 30);",
+      "btnDelete.setBounds(size.width - 130, 60, 100, 30);"
+    ]
+  },
+  {
+    "timestamp": "2026-03-07T10:34:52.125459",
+    "function_id": "BSTVisualization.java::Points.toString",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:53.037776",
+    "function_id": "BSTVisualization.java::BSTVisualization.delete",
+    "comments_kept": 7,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "data is not find.",
+      "data has 0 or 1 child",
+      "curr.data>pre.data",
+      "data has 2 child.",
+      "/* It set another node depending upon the height of left and right sub tree. */"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:54.960875",
+    "function_id": "BSTVisualization.java::Height.__init__",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:55.820994",
+    "function_id": "BSTVisualization.java::Points.__init__",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:56.730749",
+    "function_id": "BSTVisualization.java::Node.__init__",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:57.786764",
+    "function_id": "BSTVisualization.java::BSTVisualization.__init__",
+    "comments_kept": 1,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Initialize the frame."
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:58.880775",
+    "function_id": "BSTVisualization.java::Height.toString",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:34:59.743591",
+    "function_id": "BSTVisualization.java::BSTVisualization.main",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:35:00.801312",
+    "function_id": "BSTVisualization.java::BSTVisualization.keyReleased",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:35:03.311092",
+    "function_id": "BSTVisualization.java::BSTVisualization.keyPressed",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:35:04.240121",
+    "function_id": "BSTVisualization.java::BSTVisualization.keyTyped",
+    "comments_kept": 2,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Not type 'a' or 'A' character in textfield",
+      "Not type 'd' or 'D' character in textfield"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:35:06.773182",
+    "function_id": "BSTVisualization.java::BSTVisualization.actionPerformed",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-07T10:35:09.306977",
+    "function_id": "BSTVisualization.java::BSTVisualization.paint",
+    "comments_kept": 0,
+    "comments_stripped": 2,
+    "kept_samples": [],
+    "stripped_samples": [
+      "x1 = label.getX()+7",
+      "y1 = label.getY()+30"
+    ]
+  },
+  {
+    "timestamp": "2026-03-08T06:16:23.389057",
+    "function_id": "src\\BankStatement.java::BankStatement.exit",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:24.666959",
+    "function_id": "src\\Deletion.java::Deletion.delLine",
+    "comments_kept": 2,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "Check if the last line is blank",
+      "Remove the newline character"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:25.973106",
+    "function_id": "src\\Transaction.java::Transaction.debitWrite",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:27.108202",
+    "function_id": "src\\Transaction.java::Transaction.creditWrite",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:28.343086",
+    "function_id": "src\\BankStatement.java::BankStatement.bankStatementFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:29.793357",
+    "function_id": "src\\Deletion.java::Deletion.accCloseFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:31.003064",
+    "function_id": "src\\Transaction.java::Transaction.rAccCheck",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:32.046966",
+    "function_id": "src\\Transaction.java::Transaction.writeTransaction",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:33.213578",
+    "function_id": "src\\Transaction.java::Transaction.sAccBalCheck",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:34.295324",
+    "function_id": "src\\Main.java::BankStatement",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:35.426431",
+    "function_id": "src\\Main.java::Transaction",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:35.478809",
+    "function_id": "src\\Transaction.java::Transaction.allTransaction",
+    "comments_kept": 4,
+    "comments_stripped": 0,
+    "kept_samples": [
+      "rAcc Validated",
+      "sBalance ok",
+      "actual transaction",
+      "write transaction to file"
+    ],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:35.543587",
+    "function_id": "src\\Transaction.java::Transaction.transactionFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:38.193607",
+    "function_id": "src\\AccountDetails.java::AccountDetails.accountDetailsFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:39.535107",
+    "function_id": "src\\Main.java::AccountDetails",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:42.663139",
+    "function_id": "src\\BalanceInquiry.java::BalanceInquiry.balanceInquiryFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:43.953783",
+    "function_id": "src\\Creation.java::Creation.accNoCreation",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:45.010020",
+    "function_id": "src\\Creation.java::Creation.credWrite",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:46.093986",
+    "function_id": "src\\Creation.java::Creation.userWrite",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:47.118223",
+    "function_id": "src\\Creation.java::Creation.balWrite",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:50.057547",
+    "function_id": "src\\Creation.java::Creation.getUserInfoFromUser",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:51.463018",
+    "function_id": "src\\Main.java::BalanceInquiry",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:54.280818",
+    "function_id": "src\\Creation.java::Creation.createAccFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:56.933789",
+    "function_id": "src\\Main.java::balInquiry",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:57.939706",
+    "function_id": "src\\Login.java::Login.loginAuth",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:57.986913",
+    "function_id": "src\\Login.java::Login.loginFun",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:59.356795",
+    "function_id": "src\\Main.java::Creation",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:59.411811",
+    "function_id": "src\\Main.java::Login",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:59.473444",
+    "function_id": "src\\Main.java::Scanner",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:16:59.523760",
+    "function_id": "src\\Main.java::intro",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:17:02.164417",
+    "function_id": "src\\Transaction.java::Transaction.transaction",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  },
+  {
+    "timestamp": "2026-03-08T06:17:03.353196",
+    "function_id": "src\\Main.java::main",
+    "comments_kept": 0,
+    "comments_stripped": 0,
+    "kept_samples": [],
+    "stripped_samples": []
+  }
+]

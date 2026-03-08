@@ -1,0 +1,88 @@
+
+============================================================
+Timestamp: 2026-03-07T10:35:10.954239
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 0
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:10.991234
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 0
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:11.661068
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 1
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:11.687632
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 0
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:12.402395
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 2
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:12.433813
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 0
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:12.848807
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 3
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+
+
+============================================================
+Timestamp: 2026-03-07T10:35:12.874696
+File: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py
+Attempt: 0
+Stderr:
+  File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py", line 407
+    ``` 
+    ^
+SyntaxError: invalid syntax
+

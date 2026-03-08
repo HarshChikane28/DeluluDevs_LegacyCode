@@ -1,0 +1,258 @@
+2026-03-07 14:16:38,540 [WARNING] matplotlib.font_manager: Matplotlib is building the font cache; this may take a moment.
+2026-03-07 14:16:43,163 [INFO] matplotlib.font_manager: generated new fontManager
+2026-03-07 14:45:23,602 [INFO] legacy-modernizer: Graph built: 10 nodes, 10 edges, 8 unresolved
+2026-03-07 14:45:23,615 [INFO] legacy-modernizer: Translation order: 10 groups, 10 total functions
+2026-03-07 14:45:24,340 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:25,535 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:26,586 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:27,712 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:28,735 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:29,862 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:31,196 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:32,457 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:33,650 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:34,780 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 14:45:35,330 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\ba0303e6\output\src\PayrollSystem.py (10 functions)
+2026-03-07 14:45:35,453 [INFO] legacy-modernizer: Compilation: 2/2 files passed
+2026-03-07 14:45:37,235 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\ba0303e6\output\call_graph.png
+2026-03-07 14:45:37,248 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 14:45:37,253 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 14:45:37,259 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 14:45:37,267 [ERROR] legacy-modernizer: Pipeline error: 'C:\\Users\\YASH\\AppData\\Local\\Temp\\legacy-modernizer-jobs\\ba0303e6\\output\\call_graph.png' and WindowsPath('C:/Users/YASH/AppData/Local/Temp/legacy-modernizer-jobs/ba0303e6/output/call_graph.png') are the same file
+2026-03-07 15:02:13,560 [INFO] legacy-modernizer: Graph built: 10 nodes, 10 edges, 8 unresolved
+2026-03-07 15:02:13,567 [INFO] legacy-modernizer: Translation order: 10 groups, 10 total functions
+2026-03-07 15:02:14,187 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:15,312 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:16,437 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:17,461 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:18,485 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:19,509 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:20,565 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:21,658 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:22,618 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:23,908 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:02:24,421 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\5961a1fc\output\src\PayrollSystem.py (10 functions)
+2026-03-07 15:02:24,529 [INFO] legacy-modernizer: Compilation: 2/2 files passed
+2026-03-07 15:02:25,656 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\5961a1fc\output\call_graph.png
+2026-03-07 15:02:25,663 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 15:02:25,663 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 15:02:25,672 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 15:02:25,672 [ERROR] legacy-modernizer: Pipeline error: 'C:\\Users\\YASH\\AppData\\Local\\Temp\\legacy-modernizer-jobs\\5961a1fc\\output\\call_graph.png' and WindowsPath('C:/Users/YASH/AppData/Local/Temp/legacy-modernizer-jobs/5961a1fc/output/call_graph.png') are the same file
+2026-03-07 15:13:19,958 [INFO] legacy-modernizer: Graph built: 10 nodes, 10 edges, 8 unresolved
+2026-03-07 15:13:19,967 [INFO] legacy-modernizer: Translation order: 10 groups, 10 total functions
+2026-03-07 15:13:20,904 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:21,986 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:23,056 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:23,974 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:24,994 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:25,979 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:27,041 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:28,024 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:29,298 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:30,522 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:13:31,051 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\6858c54a\output\src\PayrollSystem.py (10 functions)
+2026-03-07 15:13:31,122 [INFO] legacy-modernizer: Compilation: 2/2 files passed
+2026-03-07 15:13:31,980 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\6858c54a\output\call_graph.png
+2026-03-07 15:13:31,982 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 15:13:31,988 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 15:13:31,991 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 15:13:31,991 [ERROR] legacy-modernizer: Pipeline error: 'C:\\Users\\YASH\\AppData\\Local\\Temp\\legacy-modernizer-jobs\\6858c54a\\output\\call_graph.png' and WindowsPath('C:/Users/YASH/AppData/Local/Temp/legacy-modernizer-jobs/6858c54a/output/call_graph.png') are the same file
+2026-03-07 15:22:35,541 [INFO] legacy-modernizer: Graph built: 10 nodes, 10 edges, 8 unresolved
+2026-03-07 15:22:35,550 [INFO] legacy-modernizer: Translation order: 10 groups, 10 total functions
+2026-03-07 15:22:36,103 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:37,124 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:38,142 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:39,277 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:40,199 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:41,056 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:42,248 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:43,270 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:44,295 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:45,524 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:22:46,046 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\7668b7d2\output\src\PayrollSystem.py (10 functions)
+2026-03-07 15:22:46,128 [INFO] legacy-modernizer: Compilation: 2/2 files passed
+2026-03-07 15:22:47,076 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\7668b7d2\output\call_graph.png
+2026-03-07 15:22:47,076 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 15:22:47,087 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 15:22:47,087 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 15:22:47,094 [ERROR] legacy-modernizer: Pipeline error: 'C:\\Users\\YASH\\AppData\\Local\\Temp\\legacy-modernizer-jobs\\7668b7d2\\output\\call_graph.png' and WindowsPath('C:/Users/YASH/AppData/Local/Temp/legacy-modernizer-jobs/7668b7d2/output/call_graph.png') are the same file
+2026-03-07 15:28:24,724 [INFO] legacy-modernizer: Graph built: 10 nodes, 10 edges, 8 unresolved
+2026-03-07 15:28:24,726 [INFO] legacy-modernizer: Translation order: 10 groups, 10 total functions
+2026-03-07 15:28:25,192 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:26,048 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:27,121 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:27,943 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:28,860 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:29,888 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:30,910 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:32,039 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:32,957 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:33,981 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 15:28:34,507 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c697f05a\output\src\PayrollSystem.py (10 functions)
+2026-03-07 15:28:34,573 [INFO] legacy-modernizer: Compilation: 2/2 files passed
+2026-03-07 15:28:35,554 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c697f05a\output\call_graph.png
+2026-03-07 15:28:35,554 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 15:28:35,563 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 15:28:35,566 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 15:28:35,571 [INFO] legacy-modernizer: Graph PNG already in output directory; skipping copy
+2026-03-07 15:28:35,778 [INFO] legacy-modernizer: Created ZIP: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c697f05a\translated_repo.zip
+2026-03-07 16:04:39,468 [INFO] legacy-modernizer: Graph built: 22 nodes, 24 edges, 98 unresolved
+2026-03-07 16:04:39,475 [INFO] legacy-modernizer: Translation order: 22 groups, 22 total functions
+2026-03-07 16:04:39,868 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:40,742 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:41,650 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:42,725 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:43,806 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:44,854 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:47,002 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:48,413 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:51,591 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:52,486 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:54,431 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:55,283 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:56,165 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:57,273 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:58,352 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:04:59,223 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:00,256 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:00,974 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-07 16:05:00,978 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-07 16:05:02,260 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-07 16:05:02,263 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-07 16:05:02,264 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-07 16:05:03,266 [ERROR] legacy-modernizer: Translation error for BSTVisualization.java::BSTVisualization.keyReleased: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-07 16:05:03,696 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:04,478 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-07 16:05:04,480 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-07 16:05:05,712 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-07 16:05:05,715 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-07 16:05:05,716 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-07 16:05:06,732 [ERROR] legacy-modernizer: Translation error for BSTVisualization.java::BSTVisualization.keyTyped: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-07 16:05:06,994 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-07 16:05:06,997 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-07 16:05:08,229 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-07 16:05:08,231 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-07 16:05:08,232 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-07 16:05:09,251 [ERROR] legacy-modernizer: Translation error for BSTVisualization.java::BSTVisualization.actionPerformed: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-07 16:05:10,322 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:10,863 [INFO] legacy-modernizer: Wrote C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py (19 functions)
+2026-03-07 16:05:10,955 [WARNING] legacy-modernizer: Compile error in C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py:   File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization
+2026-03-07 16:05:10,956 [INFO] legacy-modernizer: Compilation: 1/2 files passed
+2026-03-07 16:05:10,992 [WARNING] legacy-modernizer: Compile error in C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py:   File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization
+2026-03-07 16:05:10,994 [INFO] legacy-modernizer: Compilation: 1/2 files passed
+2026-03-07 16:05:11,600 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:11,688 [WARNING] legacy-modernizer: Compile error in C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py:   File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization
+2026-03-07 16:05:11,689 [INFO] legacy-modernizer: Compilation: 1/2 files passed
+2026-03-07 16:05:12,328 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:12,433 [WARNING] legacy-modernizer: Compile error in C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py:   File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization
+2026-03-07 16:05:12,434 [INFO] legacy-modernizer: Compilation: 1/2 files passed
+2026-03-07 16:05:12,794 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-07 16:05:12,875 [WARNING] legacy-modernizer: Compile error in C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization.py:   File "C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\src\BSTVisualization
+2026-03-07 16:05:12,875 [INFO] legacy-modernizer: Compilation: 1/2 files passed
+2026-03-07 16:05:13,789 [INFO] legacy-modernizer: Graph PNG saved to C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\output\call_graph.png
+2026-03-07 16:05:13,792 [INFO] legacy-modernizer: Wrote requirements.txt
+2026-03-07 16:05:13,795 [INFO] legacy-modernizer: Wrote metadata.json
+2026-03-07 16:05:13,800 [INFO] legacy-modernizer: Wrote report.md
+2026-03-07 16:05:13,803 [INFO] legacy-modernizer: Graph PNG already in output directory; skipping copy
+2026-03-07 16:05:13,993 [INFO] legacy-modernizer: Created ZIP: C:\Users\YASH\AppData\Local\Temp\legacy-modernizer-jobs\c8ee6f8a\translated_repo.zip
+2026-03-08 11:46:23,166 [ERROR] legacy-modernizer: Failed to parse src\Main.java: 
+2026-03-08 11:46:23,281 [INFO] legacy-modernizer: Graph built: 32 nodes, 49 edges, 126 unresolved
+2026-03-08 11:46:23,298 [INFO] legacy-modernizer: SCC bundle (size 3): ['src\\Main.java::Transaction', 'src\\Transaction.java::Transaction.allTransaction', 'src\\Transaction.java::Transaction.transactionFun']
+2026-03-08 11:46:23,300 [INFO] legacy-modernizer: SCC bundle (size 2): ['src\\Login.java::Login.loginAuth', 'src\\Login.java::Login.loginFun']
+2026-03-08 11:46:23,303 [WARNING] legacy-modernizer: Large SCC (size 4): ['src\\Main.java::Creation', 'src\\Main.java::Login', 'src\\Main.java::Scanner', 'src\\Main.java::intro'] - may need manual review
+2026-03-08 11:46:23,303 [INFO] legacy-modernizer: Translation order: 26 groups, 32 total functions
+2026-03-08 11:46:24,094 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:25,361 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:26,533 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:27,771 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:29,233 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:30,453 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:31,497 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:32,661 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:33,718 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:34,844 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:37,580 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:38,969 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:42,093 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:43,402 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:44,453 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:45,553 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:46,544 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:47,378 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-08 11:46:47,383 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-08 11:46:48,914 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-08 11:46:48,919 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-08 11:46:48,923 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-08 11:46:49,946 [ERROR] legacy-modernizer: Translation error for src\Creation.java::Creation.balWrite: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-08 11:46:50,853 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:51,819 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-08 11:46:51,823 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-08 11:46:53,176 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-08 11:46:53,188 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-08 11:46:53,191 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-08 11:46:54,198 [ERROR] legacy-modernizer: Translation error for src\Main.java::BalanceInquiry: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-08 11:46:54,558 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-08 11:46:54,558 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-08 11:46:55,873 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-08 11:46:55,873 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-08 11:46:55,873 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-08 11:46:56,876 [ERROR] legacy-modernizer: Translation error for src\Creation.java::Creation.createAccFun: All LLM providers exhausted. Errors: Groq rate limit hit; Gemini error: 400
+2026-03-08 11:46:57,374 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:58,769 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:46:59,774 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-03-08 11:46:59,783 [WARNING] legacy-modernizer: Rate limited on groq: Groq rate limit hit
+2026-03-08 11:47:01,091 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 400 Bad Request"
+2026-03-08 11:47:01,095 [ERROR] legacy-modernizer: Gemini error 400: {
+  "error": {
+    "code": 400,
+    "message": "API key not valid. Please pass a valid API key.",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/googl
+2026-03-08 11:47:01,099 [WARNING] legacy-modernizer: Rate limited on gemini: Gemini error: 400
+2026-03-08 11:47:02,768 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:47:03,812 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-08 11:47:04,323 [ERROR] legacy-modernizer: Pipeline error: 'charmap' codec can't encode characters in position 475-596: character maps to <undefined>

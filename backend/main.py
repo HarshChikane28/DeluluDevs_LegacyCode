@@ -144,6 +144,8 @@ async def _run_job(job_id: str, source_lang: str):
     """Background task to run the translation pipeline."""
     job = jobs[job_id]
 
+    safe_output_dir = str(Path(job["output_dir"]).resolve().absolute())
+
     async def progress_callback(stage, progress, message, data):
         """Send progress to all connected WebSocket clients."""
         msg = {
@@ -163,7 +165,7 @@ async def _run_job(job_id: str, source_lang: str):
         metadata = await run_pipeline(
             repo_path=job["repo_path"],
             source_lang=source_lang,
-            output_dir=job["output_dir"],
+            output_dir=safe_output_dir,
             progress_callback=progress_callback,
         )
         job["status"] = "completed"
