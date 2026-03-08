@@ -33,9 +33,18 @@ def assemble_project(
     (output / "report.md").write_text(report)
     logger.info("Wrote report.md")
 
-    # Copy graph PNG if available
+    # Copy graph PNG if available (avoid copying file onto itself)
     if graph_png_path and Path(graph_png_path).exists():
-        shutil.copy2(graph_png_path, output / "call_graph.png")
+        dest = output / "call_graph.png"
+        try:
+            # resolve both paths to handle mixed str/WindowsPath differences
+            if Path(graph_png_path).resolve() != dest.resolve():
+                shutil.copy2(graph_png_path, dest)
+            else:
+                logger.info("Graph PNG already in output directory; skipping copy")
+        except Exception as copy_exc:
+            # log warnings but don't fail the pipeline
+            logger.warning(f"Could not copy graph PNG: {copy_exc}")
 
     # Create ZIP
     zip_path = str(output.parent / "translated_repo")
