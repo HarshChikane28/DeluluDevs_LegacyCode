@@ -114,8 +114,11 @@ async def translate_functions(
                         },
                     )
 
-                # Rate limit awareness — small delay
-                await asyncio.sleep(0.5)
+                # Rate limit awareness — delay between LLM requests
+                # adjustable via environment variable to accommodate slower APIs
+                import os
+                delay = float(os.getenv("LLM_CALL_DELAY", "0.5"))
+                await asyncio.sleep(delay)
 
             except Exception as e:
                 logger.error(f"Translation error for {func_id}: {e}")
