@@ -9,7 +9,6 @@ from .prompt_builder import (
     build_scc_bundle_prompt,
     build_file_assembly_prompt,
 )
-from context.comment_filter import filter_comments
 from context.dependency_resolver import get_translated_dependencies
 from utils.logger import logger
 
@@ -82,17 +81,12 @@ async def translate_functions(
             try:
                 G.nodes[func_id]["status"] = "translating"
 
-                # Context Optimization: filter comments
-                filtered_code, filter_report = filter_comments(
-                    node_data["code"], source_lang, func_id
-                )
-
                 # Get translated dependencies
                 deps = get_translated_dependencies(func_id, G)
 
                 # Build and send prompt
                 prompt = build_translation_prompt(
-                    node_data, deps, filtered_code, source_lang
+                    node_data, deps, node_data["code"], source_lang
                 )
                 response = await llm_client.complete(prompt)
                 clean_code = _clean_llm_response(response)
@@ -110,7 +104,6 @@ async def translate_functions(
                             "current_function": node_data.get("qualified_name", func_id),
                             "status": "translated",
                             "graph_update": {"node_id": func_id, "new_status": "translated"},
-                            "filter_report": filter_report,
                         },
                     )
 
@@ -154,13 +147,12 @@ async def translate_functions(
                 for fid in group:
                     G.nodes[fid]["status"] = "translating"
 
-                # Filter comments for all functions in bundle
+                # Collect raw code for all functions in bundle
                 filtered_codes = []
                 funcs_data = []
                 for fid in group:
                     nd = G.nodes[fid]
-                    fc, _ = filter_comments(nd["code"], source_lang, fid)
-                    filtered_codes.append(fc)
+                    filtered_codes.append(nd["code"])
                     funcs_data.append(nd)
 
                 # Get external dependencies (outside the SCC)

@@ -44,21 +44,3 @@ def log_compiler_error(file_path: str, stderr: str, attempt: int):
         f.write(f"Stderr:\n{stderr}\n")
 
 
-def log_filtering_report(func_id: str, kept: list, stripped: list):
-    """Log comment filtering decisions."""
-    report_path = LOG_DIR / "filtering_report.json"
-    reports = []
-    if report_path.exists():
-        try:
-            reports = json.loads(report_path.read_text())
-        except Exception:
-            reports = []
-    reports.append({
-        "timestamp": datetime.utcnow().isoformat(),
-        "function_id": func_id,
-        "comments_kept": len(kept),
-        "comments_stripped": len(stripped),
-        "kept_samples": kept[:5],
-        "stripped_samples": stripped[:5],
-    })
-    report_path.write_text(json.dumps(reports, indent=2))

@@ -7,11 +7,13 @@ import shutil
 import asyncio
 import zipfile
 import tempfile
+import hashlib
+import secrets
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, List
 
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, Form, HTTPException, Header
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -40,15 +42,104 @@ app.add_middleware(
 jobs: Dict[str, Dict[str, Any]] = {}
 # WebSocket connections per job
 ws_connections: Dict[str, list] = {}
+# Running asyncio tasks per job (for cancellation)
+job_tasks: Dict[str, asyncio.Task] = {}
+
+# Auth storage (in-memory)
+users_db: Dict[str, Dict[str, Any]] = {}   # email -> user record
+auth_tokens: Dict[str, str] = {}            # token -> email
+feedback_db: List[Dict[str, Any]] = []
 
 # Working directories
 WORK_DIR = Path(tempfile.gettempdir()) / "legacy-modernizer-jobs"
 WORK_DIR.mkdir(exist_ok=True)
 
 
+def _hash_password(password: str) -> str:
+    return hashlib.sha256(password.encode("utf-8")).hexdigest()
+
+
+def _get_user_from_token(authorization: str) -> Dict[str, Any]:
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Not authenticated")
+    token = authorization[7:]
+    email = auth_tokens.get(token)
+    if not email or email not in users_db:
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
+    return users_db[email]
+
+
 @app.get("/api/health")
 async def health():
     return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
+
+# ── Auth endpoints ────────────────────────────────────────────────────────────
+
+@app.post("/api/auth/register")
+async def register(name: str = Form(...), email: str = Form(...), password: str = Form(...)):
+    """Register a new user."""
+    email = email.strip().lower()
+    if email in users_db:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    if len(password) < 6:
+        raise HTTPException(status_code=400, detail="Password must be at least 6 characters")
+    users_db[email] = {
+        "name": name.strip(),
+        "email": email,
+        "password_hash": _hash_password(password),
+        "created_at": datetime.utcnow().isoformat(),
+    }
+    token = secrets.token_urlsafe(32)
+    auth_tokens[token] = email
+    return {"token": token, "user": {"name": users_db[email]["name"], "email": email}}
+
+
+@app.post("/api/auth/login")
+async def login(email: str = Form(...), password: str = Form(...)):
+    """Authenticate and return a session token."""
+    email = email.strip().lower()
+    user = users_db.get(email)
+    if not user or user["password_hash"] != _hash_password(password):
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+    token = secrets.token_urlsafe(32)
+    auth_tokens[token] = email
+    return {"token": token, "user": {"name": user["name"], "email": email}}
+
+
+@app.post("/api/auth/logout")
+async def logout(authorization: str = Header(default=None)):
+    """Invalidate the session token."""
+    if authorization and authorization.startswith("Bearer "):
+        auth_tokens.pop(authorization[7:], None)
+    return {"status": "ok"}
+
+
+@app.get("/api/auth/me")
+async def get_me(authorization: str = Header(default=None)):
+    """Return current user info from Bearer token."""
+    user = _get_user_from_token(authorization)
+    return {"name": user["name"], "email": user["email"]}
+
+
+# ── Feedback endpoint ─────────────────────────────────────────────────────────
+
+@app.post("/api/feedback")
+async def submit_feedback(
+    name: str = Form(...),
+    email: str = Form(...),
+    message: str = Form(...),
+    rating: int = Form(5),
+):
+    """Store a feedback/suggestion submission."""
+    feedback_db.append({
+        "name": name.strip(),
+        "email": email.strip().lower(),
+        "message": message.strip(),
+        "rating": max(1, min(5, rating)),
+        "created_at": datetime.utcnow().isoformat(),
+    })
+    return {"status": "ok", "message": "Thank you for your feedback!"}
 
 
 @app.post("/api/upload")
@@ -134,10 +225,26 @@ async def start_pipeline(job_id: str = Form(...), source_lang: str = Form("auto"
 
     job["status"] = "running"
 
-    # Run pipeline in background
-    asyncio.create_task(_run_job(job_id, source_lang))
+    # Run pipeline in background, store task for cancellation
+    task = asyncio.create_task(_run_job(job_id, source_lang))
+    job_tasks[job_id] = task
 
     return {"job_id": job_id, "status": "running"}
+
+
+@app.post("/api/cancel/{job_id}")
+async def cancel_pipeline(job_id: str):
+    """Cancel a running pipeline job."""
+    if job_id not in jobs:
+        raise HTTPException(status_code=404, detail="Job not found")
+    job = jobs[job_id]
+    if job["status"] != "running":
+        raise HTTPException(status_code=400, detail=f"Job is not running (status: {job['status']})")
+    task = job_tasks.get(job_id)
+    if task and not task.done():
+        task.cancel()
+    job["status"] = "cancelled"
+    return {"job_id": job_id, "status": "cancelled"}
 
 
 async def _run_job(job_id: str, source_lang: str):
@@ -168,11 +275,16 @@ async def _run_job(job_id: str, source_lang: str):
         )
         job["status"] = "completed"
         job["metadata"] = metadata
+    except asyncio.CancelledError:
+        job["status"] = "cancelled"
+        await progress_callback("cancelled", 0, "Pipeline terminated by user.", {})
     except Exception as e:
         job["status"] = "error"
         job["error"] = str(e)
         logger.error(f"Job {job_id} failed: {e}")
         await progress_callback("error", 0, f"Pipeline failed: {str(e)}", {"error": str(e)})
+    finally:
+        job_tasks.pop(job_id, None)
 
 
 @app.get("/api/status/{job_id}")
@@ -231,6 +343,86 @@ async def get_graph(job_id: str):
         return json.loads(json_path.read_text())
 
     return {"nodes": [], "edges": []}
+
+
+# ── File Tree & Content endpoints ─────────────────────────────────────────────
+
+def _detect_language(filename: str) -> str:
+    ext = Path(filename).suffix.lower()
+    return {
+        ".java": "java", ".cob": "cobol", ".cobol": "cobol",
+        ".cbl": "cobol", ".cpy": "cobol", ".py": "python",
+        ".txt": "text", ".md": "markdown",
+    }.get(ext, "text")
+
+
+_SKIP_DIRS = {"__pycache__", "venv", ".venv", "node_modules", ".git", "target", "build", "dist", ".gradle", ".idea"}
+_SKIP_EXTS = {".class", ".jar", ".war", ".ear", ".pyc", ".pyo", ".o", ".obj", ".exe", ".dll", ".so"}
+
+
+def _build_file_tree(root: Path, base: Path) -> dict:
+    rel = str(root.relative_to(base)).replace("\\", "/")
+    if rel == ".":
+        rel = ""
+    if root.is_file():
+        if root.suffix.lower() in _SKIP_EXTS:
+            return None
+        return {"type": "file", "name": root.name, "path": rel, "language": _detect_language(root.name)}
+    children = []
+    for child in sorted(root.iterdir(), key=lambda p: (p.is_file(), p.name.lower())):
+        if child.name.startswith(".") or child.name in _SKIP_DIRS:
+            continue
+        node = _build_file_tree(child, base)
+        if node is not None:
+            children.append(node)
+    return {"type": "directory", "name": root.name, "path": rel, "children": children}
+
+
+@app.get("/api/filetree/{job_id}")
+async def get_file_tree_endpoint(job_id: str, tree_type: str = "original"):
+    """Return a JSON file tree for the original repo or translated output."""
+    if job_id not in jobs:
+        raise HTTPException(status_code=404, detail="Job not found")
+    job = jobs[job_id]
+    root = Path(job["repo_path"] if tree_type == "original" else job["output_dir"])
+    if not root.exists():
+        return {"type": "directory", "name": "empty", "path": "", "children": []}
+    return _build_file_tree(root, root)
+
+
+@app.get("/api/file-content/{job_id}")
+async def get_file_content_endpoint(job_id: str, file_path: str, file_type: str = "original"):
+    """Return the text content of a specific file (original or translated)."""
+    if job_id not in jobs:
+        raise HTTPException(status_code=404, detail="Job not found")
+    job = jobs[job_id]
+    if file_type == "original":
+        base = Path(job["repo_path"]).resolve()
+    else:
+        base = (Path(job["output_dir"]) / "src").resolve()
+    full = (base / file_path).resolve()
+    try:
+        full.relative_to(base)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid path")
+    if not full.exists() or not full.is_file():
+        raise HTTPException(status_code=404, detail="File not found")
+    # Reject binary files (e.g. .class bytecode) before trying to read as text
+    if full.suffix.lower() in _SKIP_EXTS:
+        raise HTTPException(status_code=415, detail=f"Binary file type '{full.suffix}' cannot be displayed as text")
+    try:
+        raw = full.read_bytes()
+        # Heuristic: if >10% of the first 512 bytes are null or non-printable, treat as binary
+        sample = raw[:512]
+        non_text = sum(1 for b in sample if b < 9 or (13 < b < 32))
+        if sample and non_text / len(sample) > 0.10:
+            raise HTTPException(status_code=415, detail="File appears to be binary and cannot be displayed as text")
+        content = raw.decode("utf-8", errors="replace")
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return {"content": content, "path": file_path, "language": _detect_language(full.name)}
 
 
 @app.get("/api/graph-png/{job_id}")

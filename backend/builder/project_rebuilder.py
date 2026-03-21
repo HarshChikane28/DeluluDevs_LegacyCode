@@ -33,9 +33,11 @@ def assemble_project(
     (output / "report.md").write_text(report)
     logger.info("Wrote report.md")
 
-    # Copy graph PNG if available
+    # Copy graph PNG if available and not already in the output dir
     if graph_png_path and Path(graph_png_path).exists():
-        shutil.copy2(graph_png_path, output / "call_graph.png")
+        dest = output / "call_graph.png"
+        if Path(graph_png_path).resolve() != dest.resolve():
+            shutil.copy2(graph_png_path, dest)
 
     # Create ZIP
     zip_path = str(output.parent / "translated_repo")

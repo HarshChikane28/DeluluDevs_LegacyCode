@@ -38,7 +38,7 @@ def build_translation_prompt(
 ALREADY TRANSLATED DEPENDENCIES:
 {deps_section}
 
-SOURCE FUNCTION CODE (comments pre-filtered for relevance):
+SOURCE FUNCTION CODE:
 {filtered_code}
 
 INSTRUCTIONS (READ CAREFULLY):
@@ -48,8 +48,9 @@ INSTRUCTIONS (READ CAREFULLY):
 4) Keep function responsibilities and signatures equivalent; adapt types to Python idioms.
 5) Use Python type hints where the original has type annotations.
 6) If helper functions or imports are required, include them above the function but keep changes minimal.
-7) Return ONLY the translated function code as plain text (no markdown, no commentary, no ```python blocks).
-8) If you must report missing info, append exactly one JSON object on a new line after the code: {{"missing":["reason1",...]}}.
+7) Comments: do NOT translate or carry over source comments. Omit them entirely from the output.
+8) Return ONLY the translated function code as plain text (no markdown, no commentary, no ```python blocks).
+9) If you must report missing info, append exactly one JSON object on a new line after the code: {{"missing":["reason1",...]}}.
 END."""
 
 
@@ -85,14 +86,15 @@ def build_scc_bundle_prompt(
 ALREADY TRANSLATED DEPENDENCIES:
 {deps_section}
 
-SOURCE FUNCTIONS (comments pre-filtered):
+SOURCE FUNCTIONS:
 {funcs_section}
 
 INSTRUCTIONS:
 1) Translate ALL functions above from {source_lang} to Python.
 2) Preserve mutual recursion and calling patterns exactly.
-3) Output all translated functions concatenated, each separated by a single newline.
-4) Return ONLY the translated code (no markdown, no commentary, no ```python blocks).
+3) Comments: do NOT translate or carry over source comments. Omit them entirely.
+4) Output all translated functions concatenated, each separated by a single newline.
+5) Return ONLY the translated code (no markdown, no commentary, no ```python blocks).
 END."""
 
 
