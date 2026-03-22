@@ -49,8 +49,9 @@ INSTRUCTIONS (READ CAREFULLY):
 5) Use Python type hints where the original has type annotations.
 6) If helper functions or imports are required, include them above the function but keep changes minimal.
 7) Comments: do NOT translate or carry over source comments. Omit them entirely from the output.
-8) Return ONLY the translated function code as plain text (no markdown, no commentary, no ```python blocks).
-9) If you must report missing info, append exactly one JSON object on a new line after the code: {{"missing":["reason1",...]}}.
+8) Do NOT include any explanation, preamble, or closing remarks. Start your response with the first line of Python code (e.g. `import` or `def`).
+9) Return ONLY the raw Python code — no markdown fences, no ```python, no surrounding text of any kind.
+10) If you must report missing info, append exactly one JSON object on a new line after the code: {{"missing":["reason1",...]}}.
 END."""
 
 
@@ -93,8 +94,9 @@ INSTRUCTIONS:
 1) Translate ALL functions above from {source_lang} to Python.
 2) Preserve mutual recursion and calling patterns exactly.
 3) Comments: do NOT translate or carry over source comments. Omit them entirely.
-4) Output all translated functions concatenated, each separated by a single newline.
-5) Return ONLY the translated code (no markdown, no commentary, no ```python blocks).
+4) Do NOT include any explanation, preamble, or closing remarks. Start your response with the first line of Python code.
+5) Output all translated functions concatenated, each separated by a single newline.
+6) Return ONLY the raw Python code — no markdown fences, no ```python, no surrounding text of any kind.
 END."""
 
 

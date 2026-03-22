@@ -258,7 +258,7 @@ const CodePanel = ({ content, title, accentColor }) => {
             <pre style={{
               margin: 0, paddingLeft: 12, flex: 1, fontSize: 12, lineHeight: "20px",
               fontFamily: "'JetBrains Mono', monospace", color: "#e2e8f0",
-              whiteSpace: "pre", overflowX: "auto",
+              whiteSpace: "pre-wrap", wordBreak: "break-all", overflowX: "hidden",
             }}>
               {line || " "}
             </pre>
