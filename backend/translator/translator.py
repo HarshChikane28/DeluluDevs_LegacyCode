@@ -13,26 +13,77 @@ from context.dependency_resolver import get_translated_dependencies
 from utils.logger import logger
 
 
+# Lines starting with these patterns are definitely Python code
+_PY_CODE_RE = re.compile(
+    r'^(def |async def |class |import |from |@|\s*#!|"""|\'\'\''
+    r'|[A-Za-z_]\w*\s*=|[A-Za-z_]\w*\s*\(|if |for |while |try:|with |return |pass$|raise )'
+)
+
+# Common LLM preamble / trailing prose markers (case-insensitive)
+_PROSE_STARTS = (
+    "here is", "here's", "the following", "below is", "sure,", "sure!", "certainly",
+    "as requested", "i have", "i've", "translated", "output:", "result:",
+    "the translated", "this is a", "this function", "this code", "this python",
+    "the above", "as you can", "note:", "explanation:", "this converts",
+    "this implements", "the python", "python code:", "python translation",
+)
+
+
 def _clean_llm_response(response: str) -> str:
-    """Strip markdown fences and commentary from LLM response."""
+    """
+    Extract only the Python code from an LLM response.
+    Handles: markdown fences (anywhere), leading prose, trailing commentary.
+    """
     text = response.strip()
-    # Remove markdown code blocks
-    if text.startswith("```"):
+
+    # 1. Pull content out of the first markdown code fence if one exists
+    fence_m = re.search(r'```(?:python|py)?\n(.*?)```', text, re.DOTALL | re.IGNORECASE)
+    if fence_m:
+        text = fence_m.group(1).strip()
+    elif text.startswith("```"):
+        # Fence at start without closing — strip first and last lines
         lines = text.split("\n")
-        # Remove first line (```python or ```)
         lines = lines[1:]
-        # Remove last ``` if present
         if lines and lines[-1].strip() == "```":
             lines = lines[:-1]
-        text = "\n".join(lines)
-    # Remove trailing explanation after the code
-    # Look for a line that starts with common commentary patterns
-    clean_lines = []
-    for line in text.split("\n"):
-        if line.strip().startswith("Note:") or line.strip().startswith("Explanation:"):
+        text = "\n".join(lines).strip()
+
+    lines = text.split("\n")
+
+    # 2. Strip leading prose lines (LLM preamble before actual code)
+    start = 0
+    for i, line in enumerate(lines):
+        s = line.strip().lower()
+        if not s:
+            continue
+        # If the line looks like prose, skip it
+        if any(s.startswith(p) for p in _PROSE_STARTS):
+            start = i + 1
+            continue
+        # If the line looks like Python, we found the start
+        if _PY_CODE_RE.match(line.lstrip()):
+            start = i
             break
-        clean_lines.append(line)
-    return "\n".join(clean_lines).strip()
+        # Non-empty line that doesn't look like code or known prose → likely code
+        # (e.g. a bare expression or assignment at module level)
+        break
+
+    lines = lines[start:]
+
+    # 3. Strip trailing prose lines (explanation after the code)
+    end = len(lines)
+    for i in range(len(lines) - 1, -1, -1):
+        s = lines[i].strip().lower()
+        if not s:
+            end = i
+            continue
+        if any(s.startswith(p) for p in _PROSE_STARTS):
+            end = i
+        else:
+            break
+    lines = lines[:end]
+
+    return "\n".join(lines).strip()
 
 
 async def translate_functions(
